@@ -13,9 +13,9 @@ main:
 install:
 	make main
 	@if [ ! -f $(EXECFILE) ]; then\
-		sudo chown root bright;\
-		sudo chmod 4754 bright;\
-		sudo mv bright $(EXECFILE);\
+		sudo chown root $(EXECUTABLE);\
+		sudo chmod 4754 $(EXECUTABLE);\
+		sudo mv $(EXECUTABLE) $(EXECFILE);\
 	else\
 		echo "BRIGHT ALREADY EXISTS";\
 	fi
