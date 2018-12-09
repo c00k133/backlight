@@ -11,8 +11,8 @@ main:
 	$(C) $(CFLAGS) -o $(EXECUTABLE) $(CFILE)
 
 install:
-	make main
 	@if [ ! -f $(EXECFILE) ]; then \
+		make main \
 		sudo chown root $(EXECUTABLE); \
 		sudo chmod 4754 $(EXECUTABLE); \
 		sudo mv $(EXECUTABLE) $(EXECFILE); \
