@@ -71,10 +71,5 @@ int main(int argc, char *argv[]) {
         return -1;
     }
 
-    // Return -1 if something went wrong.
-    if (change_brightness(inp)) {
-        return -1;
-    }
-
-    return 0;
+    return change_brightness(inp);
 }
